@@ -15,4 +15,14 @@ function calculateTip(bill) {
 let testBill = 100;
 console.log(`Tip for $${testBill} bill is: $${calculateTip(testBill)}`);
 
+// Use Arrays
+
+const bills = [275, 40, 430]; // Data Set 1
+const tips = bills.map(calculateTip); // Use map() to apply calculateTip to each bill
+const totals = bills.map((bill, index) => bill + tips[index]); // Sum each bill and its corresponding tip
+
+console.log("Bills:", bills);
+console.log("Tips:", tips);
+console.log("Totals:", totals);
+
 
