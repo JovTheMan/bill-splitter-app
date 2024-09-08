@@ -1,28 +1,31 @@
-// Step 2: Display Output Details (Check first commit for Step 1)
-
-let bill = 275; // Example bill value
-let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
-let total = bill + tip;
-
-console.log(`The bill was $${bill}, the tip was $${tip}, and the total value is $${total}`);
-
-// Step 3: Create calucateTip Function
-
+// Function to calculate the tip based on bill amount
 function calculateTip(bill) {
+    // Use ternary operator to determine the tip percentage
     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
 }
 
+// Test the function with a bill value of 100
 let testBill = 100;
 console.log(`Tip for $${testBill} bill is: $${calculateTip(testBill)}`);
 
-// Use Arrays
+// Data Set 1: Bill values of 275, 40, and 430
+const bills = [275, 40, 430];
 
-const bills = [275, 40, 430]; // Data Set 1
-const tips = bills.map(calculateTip); // Use map() to apply calculateTip to each bill
-const totals = bills.map((bill, index) => bill + tips[index]); // Sum each bill and its corresponding tip
+// Use map() to create an array of tips based on the bills
+const tips = bills.map(calculateTip);
 
+// Create an array of totals (bill + tip) for each bill
+const totals = bills.map((bill, index) => bill + tips[index]);
+
+// Log the results for bills, tips, and totals
 console.log("Bills:", bills);
 console.log("Tips:", tips);
 console.log("Totals:", totals);
 
+// Additional test with Data Set 2: Bill values of 125, 555, and 44
+const bills2 = [125, 555, 44];
+const tips2 = bills2.map(calculateTip);
+const totals2 = bills2.map((bill, index) => bill + tips2[index]);
 
+console.log("Bills Set 2:", bills2);
+console.log("Tips Set 2:", tips2);
