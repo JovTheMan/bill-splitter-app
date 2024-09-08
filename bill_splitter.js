@@ -29,3 +29,4 @@ const totals2 = bills2.map((bill, index) => bill + tips2[index]);
 
 console.log("Bills Set 2:", bills2);
 console.log("Tips Set 2:", tips2);
+console.log("Totals Set 2:", totals2); 
